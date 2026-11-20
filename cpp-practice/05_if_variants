@@ -1,0 +1,63 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Yunho {
+    
+    public:
+    
+    int Choko[3] = {0x33, 0x66, 0x88};
+    
+    void Piy() {
+        
+        for (int i = 0; i < 3; i++) {  
+            cout << i << endl;
+            // 포어에서 카운터 돌아가고 난뒤 아래 이프에 첫번째 랑 세번째 비교하여 출력을 나오게함
+            if (Choko[0] < 0x88) {
+                cout << Choko[i] << endl;
+            }
+        }
+    }
+
+    
+    void Fiy() {
+      
+        for (int i = 0; i < 3; i++) {
+            cout << i << endl;
+            //두번째도 카운터 를 돌린후 이프로 조건검사 실행 위에 두번째 값이랑 세번째값을 비교해 출력을함
+            if (Choko[1] < 0x88) {
+                cout << Choko[i] << endl;
+            }
+        }
+    }
+
+    void Tiy() {
+        
+        for (int i = 0; i < 3; i++) {
+            cout << i << endl;
+            //세번째는 세번째끼리 비교하고 똑같으면 출력나오게함
+        if (Choko[2] == 0x88) {
+                cout << Choko[i] << endl;
+            }
+        }
+    }
+
+    void Strang() {
+        
+        string name = "Cpp";
+        cout << name << endl;
+    }
+};
+
+int main() {
+    
+    Yunho m;
+    
+    m.Piy();
+    m.Fiy();
+    m.Tiy();
+    m.Strang();
+    return 0;
+}
